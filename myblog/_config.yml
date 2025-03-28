@@ -103,4 +103,4 @@ theme: landscape
 deploy:
   type: git
   repo: git@github.com:sangyu520/sangyu520.git
-  branch: master
+  branch: main

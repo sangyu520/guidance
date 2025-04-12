@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>引导页</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<div class="snowflakes" aria-hidden="true">
+  <!-- 生成多个雪花元素 -->
+  <div class="snowflake">❅</div>
+  <div class="snowflake">•</div>
+  <div class="snowflake">•</div>
+  <div class="snowflake">❅</div>
+  <div class="snowflake">•</div>
+  <div class="snowflake">•</div>
+</div>
+
+<script>
+  const snowContainer = document.createElement("div");
+  snowContainer.className = "snowflakes";
+  document.body.appendChild(snowContainer);
+
+  for (let i = 0; i < 30; i++) {
+    const flake = document.createElement("div");
+    flake.className = "snowflake";
+    flake.textContent = "•";
+
+    const size = Math.random() * 1.5 + 1; // 字体大小 1em ~ 2.5em
+    const left = Math.random() * 100; // left 百分比
+    const duration = Math.random() * 5 + 5; // 动画时长 5s ~ 10s
+    const delay = Math.random() * 5; // 动画延迟
+
+    flake.style.left = `${left}%`;
+    flake.style.fontSize = `${size}em`;
+    flake.style.animationDuration = `${duration}s`;
+    flake.style.animationDelay = `${delay}s`;
+
+    snowContainer.appendChild(flake);
+  }
+</script>
+
+</body>
+
+<body>
+  <div class="container">
+    <div class="content">
+      <h1>你好！</h1>
+      <p>桑榆客栈欢迎，你想去哪</p>
+      <div class="buttons">
+        <a href="https://www.sangyufeiwan.com" class="btn">生活小记（主）</a>
+        <a href="https://sangyufeiwan.com" class="btn">笔记专栏（副）</a>
+        <a href="https://www.sangyufeiwan.com/404.html" class="btn">还在建设中，别催啦！</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
